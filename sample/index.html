@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sample 1.0 (1)</title>
+        <link rel="apple-touch-icon" href="artwork.png">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style type="text/css">
+
+html, body {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    margin:0;
+    padding:0;
+    line-height: 1.4;
+    letter-spacing: 0.14px;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #007AFF;
+  text-decoration: none;
+}
+
+footer {
+    width:100%;
+    height:24px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    color: #888;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.content {
+    padding-bottom:20px;
+}
+
+.container {
+    max-width: 580px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.app-icon {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 22.37%;
+    border-width: 1px;
+    border-color: #ddd;
+    border-style: solid;
+    background-size: contain;
+}
+
+h1.app-title {
+    margin: 30px auto;
+    max-width: 400px;
+    font-weight: 200;
+    line-height: 1.28;
+}
+@media (max-width: 375px) {
+  h1.app-title {
+    font-weight: 300;
+    max-width: 90%;
+  }
+}
+
+.app-info {
+  margin: auto;
+  max-width: 80%;
+  /*margin: 20px;*/
+}
+
+.install {
+    margin: 10px auto;
+    font-size: 18px;
+    padding: 12px 22px;
+    border-style: none;
+    font-weight: 400;
+    display: inline-block;
+    text-transform: uppercase;
+    background: white;
+    font-weight: 500;
+}
+
+.tip {
+  margin: 10px auto;
+  max-width: 80%;
+  color: #888;
+}
+
+.status {
+    margin: 0px auto;
+    padding: 10px;
+    max-width: 80%;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #ddd;
+}
+
+.status-success {
+  background-color: rgb(252, 255, 245);
+  color: rgb(44, 102, 45);
+}
+
+.status-error {
+  color: rgb(145, 45, 43);
+  background-color: rgb(255, 246, 246);
+}
+
+.status-warning {
+  color: rgb(87, 58, 8);
+  background-color: rgb(255, 250, 243);
+}
+
+#status {
+  display: none;
+}
+
+        </style>
+    </head>
+
+    <body>
+      <div class="container">
+        <div class="header">
+          <div class="app-icon" style="background-image: url(artwork.png);"></div>
+          <h1 class="app-title" id="title">Sample 1.0 (1)</h1>
+        </div>
+        <div class="content">
+          <div class="app-info">Beta Preview (Late Sept)</div>
+          <a class="install" href="itms-services://?action=download-manifest&amp;url=https://rbaulin.github.io/adhoc-dist/sample/manifest.plist" id="install">Install</a>
+          <div id="status" class="status status-warning">Open this page with Safari on your mobile device</div>
+          <div class="tip">Due to Apple's policy you can install an app only when developer approves UDID of your device. <a href="http://get.udid.io/?mail=rbaulin@gmail.com&amp;uid=Sample" id="udid">Click here to find out.</a></div>
+        </div>
+        <footer>RAKE ADHOC</footer>
+      </div>
+      <script type="text/javascript">
+
+function isSafariHeuristic() {
+  var ua = navigator.userAgent.toLowerCase();
+  if (!ua.includes("applewebkit")) return false;
+  if (!ua.includes("mobile")) return false;
+  if (!ua.includes("safari")) return false;
+  if (ua.includes("crios")) return false;
+  if (ua.includes("chrome")) return false;
+  if (ua.includes("firefox")) return false;
+  if (ua.includes("opera")) return false;
+  if (ua.includes("msie")) return false;
+  return true;
+}
+
+if (!isSafariHeuristic()) {
+  var statusDiv = document.getElementById("status");
+  statusDiv.style.display = "inherit";
+  statusDiv.innerHTML = "Open this page with Safari on your mobile device";
+}
+
+      </script>
+    </body>
+</html>

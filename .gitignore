@@ -1,0 +1,9 @@
+.DS_Store
+.env
+*.pem
+*.p12
+*.pkey
+*.cer
+*.dSYM.zip
+*.mobileprovision
+Payload/*
